@@ -1,16 +1,16 @@
 package main
 
 import (
-	"os"
+	"github.com/blueben82/imagetools/commands"
 	"github.com/urfave/cli"
-	"github.com/BlueBeN82/imagetools/commands"
+	"os"
 )
 
 func main() {
 	app := cli.NewApp()
 
 	app.Name = "imagetools"
-	app.Version = "0.0.1"
+	app.Version = "0.0.5"
 	app.Usage = "A tiny helper library, written in golang, that serves some utilities that can be used to build more robust docker containers"
 
 	app.Commands = []cli.Command{
@@ -36,11 +36,11 @@ func main() {
 					Usage: "Select one of int, float, bool, string or regex as validator",
 				},
 				cli.StringFlag{
-					Name: "min",
+					Name:  "min",
 					Usage: "The minimum accepted value for int or float",
 				},
 				cli.StringFlag{
-					Name: "max",
+					Name:  "max",
 					Usage: "The maximum accepted value for int or float",
 				},
 				cli.StringFlag{
