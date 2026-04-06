@@ -1,11 +1,13 @@
 package commands
 
 import (
-	"github.com/urfave/cli"
+	"context"
 	"fmt"
+
+	"github.com/urfave/cli/v3"
 )
 
-func Logs(c *cli.Context) error {
-	fmt.Fprintf(c.App.Writer, ":wave: over here, eh\n")
+func Logs(ctx context.Context, cmd *cli.Command) error {
+	fmt.Fprintf(cmd.Root().Writer, ":wave: over here, eh\n")
 	return nil
 }
